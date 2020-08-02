@@ -1,0 +1,8 @@
+#!/bin/sh
+cd /home/mbsai29/personalpage
+sudo git fetch --all
+sudo git reset --hard origin/master
+sudo yarn install
+sudo yarn  build
+cd build
+sudo cp -R . /var/www/bhargavamacha.info/html/
