@@ -3,7 +3,7 @@ var app = express();
 const { exec } = require("child_process");
 
 
-app.all('/', function (req, res) {
+app.post('/', function (req, res) {
   	console.log(req);
 	res.send('Got it!');
 exec(" ./build", (error, stdout, stderr) => {
